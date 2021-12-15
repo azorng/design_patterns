@@ -42,7 +42,7 @@ enum DuckType {
 struct Duck {
     quack_behavior: Box<dyn QuackBehavior>,
     fly_behavior: Box<dyn FlyBehavior>,
-    display_behavior: Box<dyn Fn()>,
+    display_behavior: Box<dyn Fn() -> ()>,
 }
 impl Duck {
     fn quack(&self) {
